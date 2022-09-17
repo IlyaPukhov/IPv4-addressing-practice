@@ -28,7 +28,7 @@
             <Font name="Open Sans SemiBold" size="30.0" />
         </font>
     </Button>
-    <Ellipse fill="#242833e8" layoutX="380.0" layoutY="149.0" opacity="0.82" radiusX="182.0" radiusY="117.0" stroke="#ffffff00" strokeType="INSIDE" AnchorPane.leftAnchor="198.0" AnchorPane.rightAnchor="198.0" />
+    <Ellipse fill="#242833e8" layoutX="380.0" layoutY="149.0" opacity="0.7" radiusX="182.0" radiusY="117.0" stroke="#ffffff00" strokeType="INSIDE" style="-fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" AnchorPane.leftAnchor="198.0" AnchorPane.rightAnchor="198.0" />
     <Text fill="WHITE" layoutX="220.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IPv4" textAlignment="CENTER" wrappingWidth="319.6422424316406" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="220.35775756835938">
         <font>
             <Font name="Open Sans Bold" size="96.0" />
