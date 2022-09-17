@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="760.0" style="-fx-background-color: #ffffff;" stylesheets="@../styles/main.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ilyap.IPv4.controllers.ResultsController">
+   <children>
+      <TextField fx:id="currentAddressField" editable="false" focusTraversable="false" layoutX="404.0" layoutY="107.0" opacity="0.8" prefHeight="40.0" prefWidth="283.0" style="-fx-background-color: #ffffff; -fx-border-color: #bbbbbb; -fx-border-radius: 10;" AnchorPane.bottomAnchor="433.0" AnchorPane.leftAnchor="404.0" AnchorPane.rightAnchor="73.0">
+         <font>
+            <Font name="Open Sans Regular" size="18.0" />
+         </font></TextField>
+      <Text layoutX="35.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Исходный IP адрес" wrappingWidth="386.0422058105469" AnchorPane.bottomAnchor="436.96875" AnchorPane.leftAnchor="35.0">
+         <font>
+            <Font name="Open Sans SemiBold" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="maskField" editable="false" focusTraversable="false" layoutX="404.0" layoutY="167.0" opacity="0.8" prefHeight="40.0" prefWidth="283.0" style="-fx-background-color: #ffffff; -fx-border-color: #bbbbbb; -fx-border-radius: 10;" AnchorPane.bottomAnchor="373.0" AnchorPane.leftAnchor="404.0" AnchorPane.rightAnchor="72.79999999999995">
+         <font>
+            <Font name="Open Sans Regular" size="18.0" />
+         </font>
+      </TextField>
+      <Text layoutX="35.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Маска подсети" wrappingWidth="347.6422119140625" AnchorPane.bottomAnchor="376.96875" AnchorPane.leftAnchor="35.0">
+         <font>
+            <Font name="Open Sans SemiBold" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="hostsField" editable="false" focusTraversable="false" layoutX="404.0" layoutY="227.0" opacity="0.8" prefHeight="40.0" prefWidth="283.0" style="-fx-background-color: #ffffff; -fx-border-color: #bbbbbb; -fx-border-radius: 10;" AnchorPane.bottomAnchor="313.0" AnchorPane.leftAnchor="404.0">
+         <font>
+            <Font name="Open Sans Regular" size="18.0" />
+         </font>
+      </TextField>
+      <Text layoutX="35.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Количество хостов" wrappingWidth="347.6422119140625" AnchorPane.bottomAnchor="316.96875" AnchorPane.leftAnchor="35.0">
+         <font>
+            <Font name="Open Sans SemiBold" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="networkAddressField" editable="false" focusTraversable="false" layoutX="404.0" layoutY="287.0" opacity="0.8" prefHeight="40.0" prefWidth="283.0" style="-fx-background-color: #ffffff; -fx-border-color: #bbbbbb; -fx-border-radius: 10;" AnchorPane.bottomAnchor="253.0" AnchorPane.leftAnchor="404.0">
+         <font>
+            <Font name="Open Sans Regular" size="18.0" />
+         </font>
+      </TextField>
+      <Text layoutX="35.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Адрес сети" wrappingWidth="347.6422119140625" AnchorPane.bottomAnchor="256.96875" AnchorPane.leftAnchor="35.0">
+         <font>
+            <Font name="Open Sans SemiBold" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="broadcastAddressField" editable="false" focusTraversable="false" layoutX="404.0" layoutY="347.0" opacity="0.8" prefHeight="40.0" prefWidth="283.0" style="-fx-background-color: #ffffff; -fx-border-color: #bbbbbb; -fx-border-radius: 10;" AnchorPane.bottomAnchor="193.0" AnchorPane.leftAnchor="404.0">
+         <font>
+            <Font name="Open Sans Regular" size="18.0" />
+         </font>
+      </TextField>
+      <Text layoutX="35.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Широковещательный адрес" wrappingWidth="347.6422119140625" AnchorPane.bottomAnchor="196.96875" AnchorPane.leftAnchor="35.0">
+         <font>
+            <Font name="Open Sans SemiBold" size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="homeButton" alignment="CENTER" contentDisplay="CENTER" layoutX="228.0" layoutY="469.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="304.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 30;" text="Домой" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="228.0" AnchorPane.rightAnchor="228.0">
+         <font>
+            <Font name="Open Sans SemiBold" size="24.0" />
+         </font>
+      </Button>
+      <Text fx:id="incorrectAnswer" fill="#bf0000" layoutX="164.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Неправильный ответ" textAlignment="CENTER" visible="false" wrappingWidth="450.8421936035156" AnchorPane.bottomAnchor="503.28125">
+         <font>
+            <Font name="Open Sans SemiBold" size="40.0" />
+         </font>
+      </Text>
+      <Text fx:id="correctAnswer" fill="#009900" layoutX="154.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Правильный ответ" textAlignment="CENTER" wrappingWidth="450.8421936035156" AnchorPane.leftAnchor="154.0" AnchorPane.rightAnchor="155.15780639648438">
+         <font>
+            <Font name="Open Sans SemiBold" size="40.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="696.0" layoutY="167.0">
+         <image>
+            <Image url="@../assets/false.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="696.0" layoutY="227.0">
+         <image>
+            <Image url="@../assets/false.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="696.0" layoutY="287.0">
+         <image>
+            <Image url="@../assets/false.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="696.0" layoutY="349.0">
+         <image>
+            <Image url="@../assets/false.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="maskCorrect" fitHeight="40.0" fitWidth="40.0" layoutX="696.0" layoutY="167.0">
+         <image>
+            <Image url="@../assets/true.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hostsCorrect" fitHeight="40.0" fitWidth="40.0" layoutX="696.0" layoutY="227.0">
+         <image>
+            <Image url="@../assets/true.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="networkCorrect" fitHeight="40.0" fitWidth="40.0" layoutX="696.0" layoutY="287.0">
+         <image>
+            <Image url="@../assets/true.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="broadcastCorrect" fitHeight="40.0" fitWidth="40.0" layoutX="696.0" layoutY="349.0">
+         <image>
+            <Image url="@../assets/true.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="explosion" fitHeight="604.0" fitWidth="604.0" layoutX="102.0" layoutY="-125.0" visible="false">
+         <image>
+            <Image url="@../assets/explosion.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="firework" fitHeight="761.0" fitWidth="760.0" layoutX="-1.0" layoutY="-292.0">
+         <image>
+            <Image url="@../assets/firework.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
