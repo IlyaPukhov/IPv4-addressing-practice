@@ -1,8 +1,5 @@
 package com.ilyap.IPv4.controllers;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import com.ilyap.IPv4.AddressingUtils;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -10,23 +7,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.text.Text;
 
 import static java.lang.Integer.parseInt;
 
 public class TimerController {
 
     @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
-
-    @FXML
     private AnchorPane anchor;
-
-    @FXML
-    private Text correctAnswer;
 
     @FXML
     private TextField minutesField;
