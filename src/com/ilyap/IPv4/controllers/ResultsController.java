@@ -1,9 +1,5 @@
 package com.ilyap.IPv4.controllers;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import com.ilyap.IPv4.AddressingUtils;
 import com.ilyap.IPv4.IPv4;
 import javafx.fxml.FXML;
@@ -14,13 +10,9 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 
+import java.io.IOException;
+
 public class ResultsController {
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     private AnchorPane anchor;

@@ -1,9 +1,5 @@
 package com.ilyap.IPv4.controllers;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import com.ilyap.IPv4.AddressingUtils;
 import com.ilyap.IPv4.IPv4;
 import javafx.fxml.FXML;
@@ -13,13 +9,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class HomeController {
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     private TextField IPv4_field;

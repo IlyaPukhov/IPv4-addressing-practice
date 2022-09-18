@@ -1,11 +1,5 @@
 package com.ilyap.IPv4.controllers;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-
 import com.ilyap.IPv4.AddressingUtils;
 import com.ilyap.IPv4.IPv4;
 import javafx.application.Platform;
@@ -16,15 +10,13 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.text.Text;
 
+import java.io.IOException;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+
 import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class InputController {
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     private TextField broadcastAddressField;
