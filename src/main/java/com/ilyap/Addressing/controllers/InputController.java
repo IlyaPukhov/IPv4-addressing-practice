@@ -1,7 +1,7 @@
-package com.ilyap.IPv4.controllers;
+package com.ilyap.Addressing.controllers;
 
-import com.ilyap.IPv4.AddressingUtils;
-import com.ilyap.IPv4.IPv4;
+import com.ilyap.Addressing.AddressingUtils;
+import com.ilyap.Addressing.IPv4;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -57,7 +57,6 @@ public class InputController {
         });
 
         final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
-
         scheduler.scheduleAtFixedRate(new Runnable() {
             int countdownStarter = AddressingUtils.getTimerInterval();
 

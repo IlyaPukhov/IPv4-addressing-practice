@@ -1,6 +1,6 @@
-package com.ilyap.IPv4.controllers;
+package com.ilyap.Addressing.controllers;
 
-import com.ilyap.IPv4.AddressingUtils;
+import com.ilyap.Addressing.AddressingUtils;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;

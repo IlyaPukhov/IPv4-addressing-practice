@@ -1,4 +1,4 @@
-package com.ilyap.IPv4;
+package com.ilyap.Addressing;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
