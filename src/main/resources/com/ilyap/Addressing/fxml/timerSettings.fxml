@@ -7,58 +7,36 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="222.0" prefWidth="418.0" style="-fx-background-color: #ffffff;"
-            stylesheets="@../styles/main.css" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.ilyap.Addressing.controllers.TimerController">
-   <TextField editable="false" focusTraversable="false" layoutX="115.0" layoutY="72.0" prefHeight="51.0"
-              prefWidth="187.0" style="-fx-border-radius: 20; -fx-background-radius: 20;" AnchorPane.leftAnchor="115.0"
-              AnchorPane.rightAnchor="115.80000000000001">
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="222.0" prefWidth="418.0" style="-fx-background-color: #ffffff;" stylesheets="@../styles/main.css" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ilyap.Addressing.controllers.TimerController">
+   <TextField alignment="CENTER" editable="false" focusTraversable="false" layoutX="115.0" layoutY="72.0" prefHeight="51.0" prefWidth="187.0" style="-fx-border-radius: 20; -fx-background-radius: 20;" text=":" AnchorPane.leftAnchor="115.0" AnchorPane.rightAnchor="115.80000000000001">
       <font>
-         <Font name="Open Sans Regular" size="18.0"/>
+         <Font name="Open Sans Bold" size="24.0" />
       </font>
    </TextField>
-   <Text layoutX="205.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" textAlignment="CENTER"
-         AnchorPane.bottomAnchor="108.96875" AnchorPane.leftAnchor="205.0" AnchorPane.rightAnchor="206.15625"
-         AnchorPane.topAnchor="80.34765625">
+   <TextField fx:id="secondsField" focusTraversable="false" layoutX="205.0" layoutY="73.0" minHeight="33.0" minWidth="50.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="51.0" prefWidth="90.0" style="-fx-background-color: rgba(0,0,0,0);" text="00" AnchorPane.rightAnchor="123.0" AnchorPane.topAnchor="73.0">
       <font>
-         <Font name="Open Sans Bold" size="24.0"/>
-      </font>
-   </Text>
-   <TextField fx:id="secondsField" focusTraversable="false" layoutX="205.0" layoutY="73.0" minHeight="33.0"
-              minWidth="50.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="51.0" prefWidth="90.0"
-              style="-fx-background-color: rgba(0,0,0,0);" text="00" AnchorPane.rightAnchor="123.0"
-              AnchorPane.topAnchor="73.0">
-      <font>
-         <Font name="Open Sans Regular" size="24.0"/>
+         <Font name="Open Sans Regular" size="24.0" />
       </font>
       <opaqueInsets>
-         <Insets/>
+         <Insets />
       </opaqueInsets>
    </TextField>
-   <TextField fx:id="minutesField" alignment="CENTER_RIGHT" focusTraversable="false" layoutX="120.0" layoutY="73.0"
-              minHeight="33.0" minWidth="50.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="51.0" prefWidth="90.0"
-              style="-fx-background-color: rgba(0,0,0,0);" text="00" AnchorPane.leftAnchor="120.0"
-              AnchorPane.topAnchor="73.0">
+   <TextField fx:id="minutesField" alignment="CENTER_RIGHT" focusTraversable="false" layoutX="120.0" layoutY="73.0" minHeight="33.0" minWidth="50.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="51.0" prefWidth="90.0" style="-fx-background-color: rgba(0,0,0,0);" text="00" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="73.0">
       <font>
-         <Font name="Open Sans Regular" size="24.0"/>
+         <Font name="Open Sans Regular" size="24.0" />
       </font>
       <opaqueInsets>
-         <Insets/>
+         <Insets />
       </opaqueInsets>
    </TextField>
-   <Button fx:id="saveTimeButton" contentDisplay="CENTER" layoutX="120.0" layoutY="146.0" mnemonicParsing="false"
-           prefHeight="51.0" prefWidth="418.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 30;"
-           text="Сохранить" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="120.0"
-           AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="146.0">
+   <Button fx:id="saveTimeButton" contentDisplay="CENTER" layoutX="120.0" layoutY="146.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="418.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 30;" text="Сохранить" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="146.0">
       <font>
-         <Font name="Open Sans SemiBold" size="24.0"/>
+         <Font name="Open Sans SemiBold" size="24.0" />
       </font>
    </Button>
-   <Text layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите интервал таймера:"
-         textAlignment="CENTER" wrappingWidth="418.0" AnchorPane.topAnchor="15.0">
+   <Text layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите интервал таймера:" textAlignment="CENTER" wrappingWidth="418.0" AnchorPane.topAnchor="15.0">
       <font>
-         <Font name="Open Sans SemiBold" size="24.0"/>
+         <Font name="Open Sans SemiBold" size="24.0" />
       </font>
    </Text>
 </AnchorPane>
