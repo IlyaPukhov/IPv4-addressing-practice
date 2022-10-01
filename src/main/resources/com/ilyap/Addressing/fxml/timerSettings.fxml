@@ -9,7 +9,7 @@
 
 <AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
             prefHeight="222.0" prefWidth="418.0" style="-fx-background-color: #ffffff;"
-            stylesheets="@../styles/main.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+            stylesheets="@../styles/main.css" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.ilyap.Addressing.controllers.TimerController">
    <TextField editable="false" focusTraversable="false" layoutX="115.0" layoutY="72.0" prefHeight="51.0"
               prefWidth="187.0" style="-fx-border-radius: 20; -fx-background-radius: 20;" AnchorPane.leftAnchor="115.0"
