@@ -110,7 +110,7 @@ public class IPv4 {
                     .mapToInt(Integer::parseInt)
                     .toArray();
         } else {
-            throw new RuntimeException("Некорректный Addressing адрес!");
+            throw new RuntimeException("Некорректный IPv4 адрес!");
         }
     }
 }
