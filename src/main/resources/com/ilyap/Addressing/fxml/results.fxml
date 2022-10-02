@@ -58,7 +58,7 @@
    </TextField>
    <Text layoutX="35.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textResult" text="Широковещательный адрес" wrappingWidth="347.6422119140625" AnchorPane.bottomAnchor="199.96875" AnchorPane.leftAnchor="35.0">
       <font>
-         <Font name="Open Sans SemiBold" size="24.0" />
+         <Font name="Open Sans SemiBold" size="51.0" />
       </font>
    </Text>
    <Button fx:id="homeButton" alignment="CENTER" contentDisplay="CENTER" layoutX="228.0" layoutY="469.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="304.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 30;" text="Домой" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="228.0" AnchorPane.rightAnchor="228.0">
