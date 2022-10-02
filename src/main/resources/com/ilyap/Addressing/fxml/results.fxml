@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -8,53 +10,53 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="760.0" style="-fx-background-color: #ffffff;" stylesheets="@../styles/main.css" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ilyap.Addressing.controllers.ResultsController">
-   <TextField fx:id="currentAddressField" editable="false" focusTraversable="false" layoutX="404.0" layoutY="107.0" prefHeight="40.0" prefWidth="283.0" styleClass="field" AnchorPane.bottomAnchor="433.0" AnchorPane.leftAnchor="404.0" AnchorPane.rightAnchor="73.0">
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="760.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ilyap.Addressing.controllers.ResultsController">
+   <TextField fx:id="currentAddressField" editable="false" focusTraversable="false" layoutX="404.0" layoutY="107.0" prefHeight="40.0" prefWidth="283.0" styleClass="fieldResult" AnchorPane.bottomAnchor="433.0" AnchorPane.leftAnchor="404.0" AnchorPane.rightAnchor="73.0">
       <font>
          <Font name="Open Sans Regular" size="20.0" />
       </font>
    </TextField>
-   <Text layoutX="35.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Исходный IP адрес" wrappingWidth="386.0422058105469" AnchorPane.bottomAnchor="438.3828125" AnchorPane.leftAnchor="35.0">
+   <Text layoutX="35.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Исходный IP адрес" wrappingWidth="386.0422058105469" AnchorPane.bottomAnchor="438.3828125" AnchorPane.leftAnchor="35.0">
       <font>
          <Font name="Open Sans SemiBold" size="26.0" />
       </font>
    </Text>
-   <TextField fx:id="maskField" editable="false" focusTraversable="false" layoutX="404.0" layoutY="167.0" prefHeight="40.0" prefWidth="283.0" styleClass="field" AnchorPane.bottomAnchor="373.0" AnchorPane.leftAnchor="404.0" AnchorPane.rightAnchor="72.79999999999995">
+   <TextField fx:id="maskField" editable="false" focusTraversable="false" layoutX="404.0" layoutY="167.0" prefHeight="40.0" prefWidth="283.0" styleClass="fieldResult" AnchorPane.bottomAnchor="373.0" AnchorPane.leftAnchor="404.0" AnchorPane.rightAnchor="72.79999999999995">
       <font>
          <Font name="Open Sans Regular" size="20.0" />
       </font>
    </TextField>
-   <Text layoutX="35.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Маска подсети" wrappingWidth="347.6422119140625" AnchorPane.bottomAnchor="379.96875" AnchorPane.leftAnchor="35.0">
+   <Text layoutX="35.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textResult" text="Маска подсети" wrappingWidth="347.6422119140625" AnchorPane.bottomAnchor="379.96875" AnchorPane.leftAnchor="35.0">
       <font>
          <Font name="Open Sans SemiBold" size="24.0" />
       </font>
    </Text>
-   <TextField fx:id="hostsField" editable="false" focusTraversable="false" layoutX="404.0" layoutY="227.0" prefHeight="40.0" prefWidth="283.0" styleClass="field" AnchorPane.bottomAnchor="313.0" AnchorPane.leftAnchor="404.0">
+   <TextField fx:id="hostsField" editable="false" focusTraversable="false" layoutX="404.0" layoutY="227.0" prefHeight="40.0" prefWidth="283.0" styleClass="fieldResult" AnchorPane.bottomAnchor="313.0" AnchorPane.leftAnchor="404.0">
       <font>
          <Font name="Open Sans Regular" size="20.0" />
       </font>
    </TextField>
-   <Text layoutX="35.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Количество хостов" wrappingWidth="347.6422119140625" AnchorPane.bottomAnchor="319.96875" AnchorPane.leftAnchor="35.0">
+   <Text layoutX="35.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textResult" text="Количество хостов" wrappingWidth="347.6422119140625" AnchorPane.bottomAnchor="319.96875" AnchorPane.leftAnchor="35.0">
       <font>
          <Font name="Open Sans SemiBold" size="24.0" />
       </font>
    </Text>
-   <TextField fx:id="networkAddressField" editable="false" focusTraversable="false" layoutX="404.0" layoutY="287.0" prefHeight="40.0" prefWidth="283.0" styleClass="field" AnchorPane.bottomAnchor="253.0" AnchorPane.leftAnchor="404.0">
+   <TextField fx:id="networkAddressField" editable="false" focusTraversable="false" layoutX="404.0" layoutY="287.0" prefHeight="40.0" prefWidth="283.0" styleClass="fieldResult" AnchorPane.bottomAnchor="253.0" AnchorPane.leftAnchor="404.0">
       <font>
          <Font name="Open Sans Regular" size="20.0" />
       </font>
    </TextField>
-   <Text layoutX="35.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Адрес сети" wrappingWidth="347.6422119140625" AnchorPane.bottomAnchor="259.96875" AnchorPane.leftAnchor="35.0">
+   <Text layoutX="35.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textResult" text="Адрес сети" wrappingWidth="347.6422119140625" AnchorPane.bottomAnchor="259.96875" AnchorPane.leftAnchor="35.0">
       <font>
          <Font name="Open Sans SemiBold" size="24.0" />
       </font>
    </Text>
-   <TextField fx:id="broadcastAddressField" editable="false" focusTraversable="false" layoutX="404.0" layoutY="347.0" prefHeight="40.0" prefWidth="283.0" styleClass="field" AnchorPane.bottomAnchor="193.0" AnchorPane.leftAnchor="404.0">
+   <TextField fx:id="broadcastAddressField" editable="false" focusTraversable="false" layoutX="404.0" layoutY="347.0" prefHeight="40.0" prefWidth="283.0" styleClass="fieldResult" AnchorPane.bottomAnchor="193.0" AnchorPane.leftAnchor="404.0">
       <font>
          <Font name="Open Sans Regular" size="20.0" />
       </font>
    </TextField>
-   <Text layoutX="35.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Широковещательный адрес" wrappingWidth="347.6422119140625" AnchorPane.bottomAnchor="199.96875" AnchorPane.leftAnchor="35.0">
+   <Text layoutX="35.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textResult" text="Широковещательный адрес" wrappingWidth="347.6422119140625" AnchorPane.bottomAnchor="199.96875" AnchorPane.leftAnchor="35.0">
       <font>
          <Font name="Open Sans SemiBold" size="24.0" />
       </font>
@@ -63,13 +65,21 @@
       <font>
          <Font name="Open Sans SemiBold" size="28.0" />
       </font>
+      <stylesheets>
+         <URL value="@../styles/fontstyles.css" />
+         <URL value="@../styles/main.css" />
+      </stylesheets>
+      <styleClass>
+         <String fx:value="button" />
+         <String fx:value="saveButton" />
+      </styleClass>
    </Button>
-   <Text fx:id="correctAnswer" fill="#009900" layoutX="154.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Правильный ответ" textAlignment="CENTER" wrappingWidth="760.0" AnchorPane.bottomAnchor="503.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+   <Text fx:id="correctAnswer" fill="#009900" layoutX="154.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="answer" text="Правильный ответ" textAlignment="CENTER" wrappingWidth="760.0" AnchorPane.bottomAnchor="503.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
       <font>
-         <Font name="Open Sans SemiBold" size="44.0" />
+         <Font name="Open Sans SemiBold" size="45.0" />
       </font>
    </Text>
-   <Text fx:id="incorrectAnswer" fill="#bf0000" layoutX="-1.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Неправильный ответ" textAlignment="CENTER" visible="false" wrappingWidth="760.0" AnchorPane.bottomAnchor="503.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+   <Text fx:id="incorrectAnswer" fill="#bf0000" layoutX="-1.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="answer" text="Неправильный ответ" textAlignment="CENTER" visible="false" wrappingWidth="760.0" AnchorPane.bottomAnchor="503.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
       <font>
          <Font name="Open Sans SemiBold" size="44.0" />
       </font>
@@ -104,4 +114,8 @@
    <ImageView fx:id="firework" fitHeight="761.0" fitWidth="760.0" layoutX="-1.0" layoutY="-292.0">
       <Image url="@../assets/firework.gif" />
    </ImageView>
+   <stylesheets>
+      <URL value="@../styles/main.css" />
+      <URL value="@../styles/fontstyles.css" />
+   </stylesheets>
 </AnchorPane>

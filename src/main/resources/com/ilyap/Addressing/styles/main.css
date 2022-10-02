@@ -1,17 +1,17 @@
-.button:hover {
+.button:hover, .saveButton:hover {
     -fx-opacity: 0.85;
 }
 
-.button:pressed {
+.button:pressed, .saveButton:pressed {
     -fx-scale-y: 0.95;
     -fx-scale-x: 0.95;
 }
 
-.button {
+.button, .saveButton {
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 1), 5, 0.0, 0, 1);
 }
 
-.field {
+.field, .fieldResult, .fieldTimer {
     -fx-background-color: #ffffff;
     -fx-border-color: #bbbbbb;
     -fx-border-radius: 10;

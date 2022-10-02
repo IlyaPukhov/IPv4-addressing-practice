@@ -1,0 +1,60 @@
+@font-face {
+    src: url("../fonts/OpenSans_SemiBold.ttf");
+}
+
+@font-face {
+    src: url("../fonts/OpenSans_Regular.ttf");
+}
+
+.title, .text, .button, .saveButton, .bigTitle, .textResult, .answer {
+    -fx-font-family: 'Open Sans SemiBold';
+    -fx-font-smoothing-type: gray;
+}
+
+.title {
+    -fx-font-size: 30;
+}
+
+.text, .fieldSource {
+    -fx-font-size: 26;
+}
+
+.button {
+    -fx-font-size: 30;
+}
+
+.saveButton {
+    -fx-font-size: 24;
+}
+
+.field, .fieldTimer, .fieldSecond {
+    -fx-font-family: 'Open Sans Regular';
+    -fx-font-smoothing-type: gray;
+    -fx-font-size: 26;
+}
+
+.fieldTimer {
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-border-width: 0;
+}
+
+.fieldResult {
+    -fx-font-family: 'Open Sans Regular';
+    -fx-font-smoothing-type: gray;
+    -fx-font-size: 20;
+}
+.textResult {
+    -fx-font-size: 24;
+}
+
+.fieldSecond {
+    -fx-font-size: 24;
+}
+
+.answer {
+    -fx-font-size: 44;
+}
+
+.bigTitle {
+    -fx-font-size: 96;
+}

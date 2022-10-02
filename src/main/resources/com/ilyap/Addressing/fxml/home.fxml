@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -9,27 +10,27 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="760.0" style="-fx-background-color: #ffffff;" stylesheets="@../styles/main.css" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ilyap.Addressing.controllers.HomeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="760.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ilyap.Addressing.controllers.HomeController">
     <ImageView opacity="0.7" pickOnBounds="true" preserveRatio="true" rotate="180.0" smooth="false">
         <Image url="@../assets/background.png" />
     </ImageView>
-    <TextField fx:id="IPv4_field" focusTraversable="false" layoutX="192.0" layoutY="344.0" prefHeight="72.0" prefWidth="376.0" promptText="192.168.1.1/19" style="-fx-background-color: #ffffff; -fx-border-color: #bbbbbb; -fx-border-radius: 20; -fx-background-radius: 20;" AnchorPane.bottomAnchor="164.0" AnchorPane.leftAnchor="192.0" AnchorPane.rightAnchor="192.0">
+    <TextField fx:id="IPv4_field" focusTraversable="false" layoutX="192.0" layoutY="344.0" prefHeight="72.0" prefWidth="376.0" promptText="192.168.1.1/19" style="-fx-background-color: #ffffff; -fx-border-color: #bbbbbb; -fx-border-radius: 20; -fx-background-radius: 20;" styleClass="field" AnchorPane.bottomAnchor="164.0" AnchorPane.leftAnchor="192.0" AnchorPane.rightAnchor="192.0">
         <font>
-            <Font name="Open Sans Regular" size="24.0" />
+            <Font name="Open Sans Regular" size="6.0" />
         </font>
     </TextField>
-    <Text layoutX="192.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите исходный IP адрес:" textAlignment="CENTER" wrappingWidth="376.0" AnchorPane.bottomAnchor="247.0" AnchorPane.leftAnchor="192.0" AnchorPane.rightAnchor="192.0">
+    <Text layoutX="192.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Введите исходный IP адрес:" textAlignment="CENTER" wrappingWidth="376.0" AnchorPane.bottomAnchor="247.0" AnchorPane.leftAnchor="192.0" AnchorPane.rightAnchor="192.0">
         <font>
-            <Font name="Open Sans SemiBold" size="24.0" />
+            <Font name="Open Sans SemiBold" size="41.0" />
         </font>
     </Text>
-    <Button fx:id="startButton" contentDisplay="CENTER" layoutX="255.0" layoutY="457.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="250.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 30;" text="Начать" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="255.0">
+    <Button fx:id="startButton" contentDisplay="CENTER" layoutX="255.0" layoutY="457.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="250.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 30;" stylesheets="@../styles/fontstyles.css" text="Начать" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="255.0">
         <font>
-            <Font name="Open Sans SemiBold" size="30.0" />
+            <Font name="Open Sans SemiBold" size="1.0" />
         </font>
     </Button>
     <Ellipse fill="#242833e8" layoutX="380.0" layoutY="149.0" opacity="0.7" radiusX="182.0" radiusY="117.0" stroke="#ffffff00" strokeType="INSIDE" style="-fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);" AnchorPane.leftAnchor="198.0" AnchorPane.rightAnchor="198.0" />
-    <Text fill="WHITE" layoutX="220.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IPv4" textAlignment="CENTER" wrappingWidth="319.6422424316406" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="220.35775756835938">
+    <Text fill="WHITE" layoutX="220.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="bigTitle" text="IPv4" textAlignment="CENTER" wrappingWidth="319.6422424316406" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="220.35775756835938">
         <font>
             <Font name="Open Sans Bold" size="96.0" />
         </font>
@@ -38,4 +39,8 @@
         <Image url="@../assets/settings.png" />
     </ImageView>
     <Text layoutX="99.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+   <stylesheets>
+      <URL value="@../styles/main.css" />
+      <URL value="@../styles/fontstyles.css" />
+   </stylesheets>
 </AnchorPane>
