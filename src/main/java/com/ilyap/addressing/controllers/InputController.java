@@ -39,6 +39,8 @@ public class InputController {
     @FXML
     private Button resultsButton;
 
+    private boolean isDone;
+
     @FXML
     void initialize() {
         IPv4 ipv4 = AddressingUtils.getIPv4();
@@ -52,7 +54,7 @@ public class InputController {
         resultsButton.setOnAction(actionEvent -> openNextScene());
         broadcastAddressField.setOnKeyPressed(keyEvent -> {
             if (keyEvent.getCode() == KeyCode.ENTER) {
-                openNextScene();
+                isDone = true;
             }
         });
 
@@ -64,12 +66,13 @@ public class InputController {
                 remainingTime.setText(String.format("%02d:%02d", countdownStarter / 60, countdownStarter % 60));
                 countdownStarter--;
 
-                if (countdownStarter < 0) {
+                if (countdownStarter < 0 || isDone) {
                     scheduler.shutdown();
                     openNextScene();
                 }
             }
         }, 0, 1, SECONDS);
+
     }
 
     public void openNextScene() {

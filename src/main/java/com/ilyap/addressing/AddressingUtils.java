@@ -1,5 +1,6 @@
 package com.ilyap.addressing;
 
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -30,6 +31,11 @@ public final class AddressingUtils {
     }
 
     public static void setWindowScene(Stage stage, String path) throws IOException {
+        stage.setOnCloseRequest(t -> {
+            Platform.exit();
+            System.exit(0);
+        });
+
         Parent root = FXMLLoader.load(Objects.requireNonNull(AddressingUtils.class.getResource(path)));
         stage.getIcons().add(
                 new Image(Objects.requireNonNull(AddressingUtils.class.getResourceAsStream("assets/icon.png"))));

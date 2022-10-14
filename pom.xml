@@ -6,7 +6,7 @@
 
     <groupId>com.ilyap</groupId>
     <artifactId>IPv4</artifactId>
-    <version>1.3</version>
+    <version>1.4</version>
     <name>IPv4Addressing</name>
 
     <properties>
@@ -97,12 +97,12 @@
                                 <jdkPreference>preferJre</jdkPreference>
                             </jre>
                             <versionInfo>
-                                <fileVersion>1.3.0.0</fileVersion>
+                                <fileVersion>1.4.0.0</fileVersion>
                                 <txtFileVersion>${project.version}</txtFileVersion>
                                 <fileDescription>${project.name}</fileDescription>
-                                <productVersion>1.3.0.0</productVersion>
+                                <productVersion>1.4.0.0</productVersion>
                                 <copyright>(C) 2022 Ilya Pukhov</copyright>
-                                <txtProductVersion>1.3.0.0</txtProductVersion>
+                                <txtProductVersion>1.4.0.0</txtProductVersion>
                                 <productName>${project.name}</productName>
                                 <internalName>IPv4Addressing</internalName>
                                 <originalFilename>IPv4_Addressing.exe</originalFilename>
