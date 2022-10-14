@@ -1,4 +1,4 @@
-package com.ilyap.Addressing;
+package com.ilyap.addressing;
 
 import java.util.Arrays;
 import java.util.regex.Pattern;

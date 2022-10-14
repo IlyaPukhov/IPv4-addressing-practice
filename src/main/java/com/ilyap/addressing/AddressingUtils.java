@@ -1,4 +1,4 @@
-package com.ilyap.Addressing;
+package com.ilyap.addressing;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

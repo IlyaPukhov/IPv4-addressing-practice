@@ -49,6 +49,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.4.2</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -61,7 +62,7 @@
                     <archive>
                         <manifest>
                             <mainClass>
-                                com.ilyap.Addressing.IPv4Launcher
+                                com.ilyap.addressing.IPv4Launcher
                             </mainClass>
                         </manifest>
                     </archive>
@@ -87,10 +88,10 @@
                             <outfile>${project.build.directory}/IPv4_Addressing.exe</outfile>
                             <downloadUrl>https://java.com/download</downloadUrl>
                             <classPath>
-                                <mainClass>com.ilyap.Addressing.IPv4Launcher</mainClass>
+                                <mainClass>com.ilyap.addressing.IPv4Launcher</mainClass>
                                 <preCp>anything</preCp>
                             </classPath>
-                            <icon>${project.basedir}/src/main/resources/com/ilyap/Addressing/assets/icon.ico</icon>
+                            <icon>${project.basedir}/src/main/resources/com/ilyap/addressing/assets/icon.ico</icon>
                             <jre>
                                 <minVersion>1.8.0</minVersion>
                                 <jdkPreference>preferJre</jdkPreference>
@@ -128,7 +129,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.ilyap.IPv4/com.ilyap.Addressing.IPv4Launcher</mainClass>
+                            <mainClass>com.ilyap.IPv4/com.ilyap.addressing.IPv4Launcher</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>

@@ -3,8 +3,8 @@ module com.ilyap.Addressing {
     requires javafx.fxml;
 
 
-    opens com.ilyap.Addressing to javafx.fxml;
-    exports com.ilyap.Addressing;
-    exports com.ilyap.Addressing.controllers;
-    opens com.ilyap.Addressing.controllers to javafx.fxml;
+    opens com.ilyap.addressing to javafx.fxml;
+    exports com.ilyap.addressing;
+    exports com.ilyap.addressing.controllers;
+    opens com.ilyap.addressing.controllers to javafx.fxml;
 }

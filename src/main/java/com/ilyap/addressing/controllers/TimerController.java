@@ -1,6 +1,6 @@
-package com.ilyap.Addressing.controllers;
+package com.ilyap.addressing.controllers;
 
-import com.ilyap.Addressing.AddressingUtils;
+import com.ilyap.addressing.AddressingUtils;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;

@@ -1,4 +1,4 @@
-package com.ilyap.Addressing;
+package com.ilyap.addressing;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
