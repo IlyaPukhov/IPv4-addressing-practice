@@ -11,10 +11,8 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-
-import static java.util.concurrent.TimeUnit.SECONDS;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class InputController {
 
@@ -39,8 +37,6 @@ public class InputController {
     @FXML
     private Button resultsButton;
 
-    private boolean isDone;
-
     @FXML
     void initialize() {
         IPv4 ipv4 = AddressingUtils.getIPv4();
@@ -54,24 +50,24 @@ public class InputController {
         resultsButton.setOnAction(actionEvent -> openNextScene());
         broadcastAddressField.setOnKeyPressed(keyEvent -> {
             if (keyEvent.getCode() == KeyCode.ENTER) {
-                isDone = true;
+                openNextScene();
             }
         });
 
-        final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
-        scheduler.scheduleAtFixedRate(new Runnable() {
+        Timer timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
             int countdownStarter = AddressingUtils.getTimerInterval();
 
             public void run() {
                 remainingTime.setText(String.format("%02d:%02d", countdownStarter / 60, countdownStarter % 60));
                 countdownStarter--;
 
-                if (countdownStarter < 0 || isDone) {
-                    scheduler.shutdown();
+                if (countdownStarter < 0) {
+                    timer.cancel();
                     openNextScene();
                 }
             }
-        }, 0, 1, SECONDS);
+        }, 0, 1000);
 
     }
 
