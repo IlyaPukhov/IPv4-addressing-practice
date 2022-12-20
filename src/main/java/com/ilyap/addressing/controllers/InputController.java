@@ -6,6 +6,7 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.text.Text;
@@ -32,15 +33,31 @@ public class InputController {
     private TextField networkAddressField;
 
     @FXML
+    private ImageView pauseButton;
+
+    @FXML
+    private ImageView continueButton;
+
+    @FXML
     private Text remainingTime;
 
     @FXML
     private Button resultsButton;
 
+    private int countdownTime;
+    private int timeLeft;
+    private Timer lastTimer;
+
+
     @FXML
     void initialize() {
+        int initialInterval = AddressingUtils.getTimerInterval();
+        remainingTime.setText(String.format("%02d:%02d", initialInterval / 60, initialInterval % 60));
+
         IPv4 ipv4 = AddressingUtils.getIPv4();
         currentAddressField.setText(ipv4.getIPv4());
+
+        lastTimer = startTimer(initialInterval);
 
         maskField.setOnKeyPressed(keyEvent -> requestFocus(keyEvent, hostsField));
         hostsField.setOnKeyPressed(keyEvent -> requestFocus(keyEvent, networkAddressField));
@@ -54,21 +71,40 @@ public class InputController {
             }
         });
 
+        pauseButton.setOnMouseClicked(mouseEvent -> timeLeft = stopTimer(lastTimer));
+
+        continueButton.setOnMouseClicked(mouseEvent -> lastTimer = startTimer(timeLeft));
+    }
+
+    public Timer startTimer(int interval) {
+        pauseButton.setVisible(true);
+        continueButton.setVisible(false);
+
         Timer timer = new Timer();
+        countdownTime = interval;
+
         timer.scheduleAtFixedRate(new TimerTask() {
-            int countdownStarter = AddressingUtils.getTimerInterval();
 
             public void run() {
-                remainingTime.setText(String.format("%02d:%02d", countdownStarter / 60, countdownStarter % 60));
-                countdownStarter--;
+                remainingTime.setText(String.format("%02d:%02d", countdownTime / 60, countdownTime % 60));
+                countdownTime--;
 
-                if (countdownStarter < 0) {
+                if (countdownTime < 0) {
                     timer.cancel();
                     openNextScene();
                 }
             }
-        }, 0, 1000);
+        }, 500, 1000);
 
+        return timer;
+    }
+
+    public int stopTimer(Timer timer) {
+        pauseButton.setVisible(false);
+        continueButton.setVisible(true);
+        timer.cancel();
+
+        return countdownTime;
     }
 
     public void openNextScene() {
