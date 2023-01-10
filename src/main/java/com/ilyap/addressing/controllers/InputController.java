@@ -1,5 +1,8 @@
 package com.ilyap.addressing.controllers;
 
+import com.ilyap.addressing.exceptions.NextSceneException;
+import com.ilyap.addressing.interfaces.FocusSwitchable;
+import com.ilyap.addressing.interfaces.SceneTransitionable;
 import com.ilyap.addressing.AddressingUtils;
 import com.ilyap.addressing.IPv4;
 import javafx.application.Platform;
@@ -15,7 +18,7 @@ import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class InputController {
+public class InputController implements SceneTransitionable, FocusSwitchable {
 
     @FXML
     private TextField broadcastAddressField;
@@ -59,10 +62,10 @@ public class InputController {
 
         lastTimer = startTimer(initialInterval);
 
-        maskField.setOnKeyPressed(keyEvent -> requestFocus(keyEvent, hostsField));
-        hostsField.setOnKeyPressed(keyEvent -> requestFocus(keyEvent, networkAddressField));
-        networkAddressField.setOnKeyPressed(keyEvent -> requestFocus(keyEvent, broadcastAddressField));
-        broadcastAddressField.setOnKeyPressed(keyEvent -> requestFocus(keyEvent, maskField));
+        maskField.setOnKeyPressed(keyEvent -> switchFocus(keyEvent, hostsField));
+        hostsField.setOnKeyPressed(keyEvent -> switchFocus(keyEvent, networkAddressField));
+        networkAddressField.setOnKeyPressed(keyEvent -> switchFocus(keyEvent, broadcastAddressField));
+        broadcastAddressField.setOnKeyPressed(keyEvent -> switchFocus(keyEvent, maskField));
 
         resultsButton.setOnAction(actionEvent -> openNextScene());
         broadcastAddressField.setOnKeyPressed(keyEvent -> {
@@ -84,7 +87,6 @@ public class InputController {
         countdownTime = interval;
 
         timer.scheduleAtFixedRate(new TimerTask() {
-
             public void run() {
                 remainingTime.setText(String.format("%02d:%02d", countdownTime / 60, countdownTime % 60));
                 countdownTime--;
@@ -107,19 +109,22 @@ public class InputController {
         return countdownTime;
     }
 
+    @Override
     public void openNextScene() {
+        lastTimer.cancel();
         AddressingUtils.setFields(maskField.getText(), hostsField.getText(),
                 networkAddressField.getText(), broadcastAddressField.getText());
         Platform.runLater(() -> {
             try {
                 AddressingUtils.openNextScene(resultsButton, "fxml/results.fxml");
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                throw new NextSceneException(e.getMessage());
             }
         });
     }
 
-    public void requestFocus(KeyEvent keyEvent, TextField field) {
+    @Override
+    public void switchFocus(KeyEvent keyEvent, TextField field) {
         if (keyEvent.getCode() == KeyCode.TAB) {
             field.requestFocus();
         }

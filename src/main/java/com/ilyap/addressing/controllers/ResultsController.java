@@ -2,6 +2,8 @@ package com.ilyap.addressing.controllers;
 
 import com.ilyap.addressing.AddressingUtils;
 import com.ilyap.addressing.IPv4;
+import com.ilyap.addressing.exceptions.NextSceneException;
+import com.ilyap.addressing.interfaces.SceneTransitionable;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -12,7 +14,7 @@ import javafx.scene.text.Text;
 
 import java.io.IOException;
 
-public class ResultsController {
+public class ResultsController implements SceneTransitionable {
 
     @FXML
     private AnchorPane anchor;
@@ -97,12 +99,12 @@ public class ResultsController {
         }
     }
 
-
+    @Override
     public void openNextScene() {
         try {
             AddressingUtils.openNextScene(homeButton, "fxml/home.fxml");
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new NextSceneException(e.getMessage());
         }
     }
 }

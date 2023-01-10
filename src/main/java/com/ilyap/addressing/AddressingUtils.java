@@ -8,7 +8,6 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Objects;
 
 public final class AddressingUtils {
     private static IPv4 ipv4;
@@ -32,9 +31,9 @@ public final class AddressingUtils {
     public static void setWindowScene(Stage stage, String path) throws IOException {
         stage.setOnCloseRequest(t -> System.exit(0));
 
-        Parent root = FXMLLoader.load(Objects.requireNonNull(AddressingUtils.class.getResource(path)));
+        Parent root = FXMLLoader.load(AddressingUtils.class.getResource(path));
         stage.getIcons().add(
-                new Image(Objects.requireNonNull(AddressingUtils.class.getResourceAsStream("assets/icon.png"))));
+                new Image(AddressingUtils.class.getResourceAsStream("assets/icon.png")));
         stage.setTitle("IPv4 адресация");
         stage.setScene(new Scene(root));
         stage.setResizable(false);

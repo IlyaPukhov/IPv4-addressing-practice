@@ -1,6 +1,7 @@
 package com.ilyap.addressing.controllers;
 
 import com.ilyap.addressing.AddressingUtils;
+import com.ilyap.addressing.interfaces.FocusSwitchable;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -10,7 +11,7 @@ import javafx.scene.layout.AnchorPane;
 
 import static java.lang.Integer.parseInt;
 
-public class TimerController {
+public class TimerController implements FocusSwitchable {
 
     @FXML
     private AnchorPane anchor;
@@ -37,8 +38,8 @@ public class TimerController {
             }
         });
 
-        minutesField.setOnKeyPressed(keyEvent -> requestFocus(keyEvent, secondsField));
-        secondsField.setOnKeyPressed(keyEvent -> requestFocus(keyEvent, minutesField));
+        minutesField.setOnKeyPressed(keyEvent -> switchFocus(keyEvent, secondsField));
+        secondsField.setOnKeyPressed(keyEvent -> switchFocus(keyEvent, minutesField));
 
         addTextLimiter(minutesField, 2);
         addTextLimiter(secondsField, 2);
@@ -59,7 +60,8 @@ public class TimerController {
         });
     }
 
-    public void requestFocus(KeyEvent keyEvent, TextField field) {
+    @Override
+    public void switchFocus(KeyEvent keyEvent, TextField field) {
         if (keyEvent.getCode() == KeyCode.RIGHT || keyEvent.getCode() == KeyCode.LEFT
                 || keyEvent.getCode() == KeyCode.TAB) {
             field.requestFocus();

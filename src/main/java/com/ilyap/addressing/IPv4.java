@@ -1,5 +1,7 @@
 package com.ilyap.addressing;
 
+import com.ilyap.addressing.exceptions.IPException;
+
 import java.util.Arrays;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -110,7 +112,7 @@ public class IPv4 {
                     .mapToInt(Integer::parseInt)
                     .toArray();
         } else {
-            throw new RuntimeException("Некорректный IPv4 адрес!");
+            throw new IPException("Некорректный IPv4 адрес!");
         }
     }
 }
